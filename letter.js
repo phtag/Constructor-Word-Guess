@@ -1,4 +1,4 @@
-function letter(underlyingCharacter)
+function Letter(underlyingCharacter)
 {
     this.underlyingCharacter = underlyingCharacter;
     this.guessed = guessed;
@@ -9,9 +9,10 @@ function letter(underlyingCharacter)
             return '_';
         }
     }
-    this.updateCharacter = function(guessedCharacter) {
+    this.checkLetter = function(guessedCharacter) {
         if (guessedCharacter === this.underlyingCharacter) {
             this.guessed = true;
         } 
     }
 }
+module.exports = Letter;
