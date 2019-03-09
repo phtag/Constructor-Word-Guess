@@ -4,7 +4,9 @@ const inquirer = require('inquirer');
 
 const wordsList = ['fortunate', 'excitable', 'gentrification'];
 var index = Math.floor(Math.random() * wordsList.length);
-console.log(index);
+var currentWord = new Word(wordsList[index]);
+console.log(currentWord);
+
 function displayCurrentWord() {
     var wordToDisplay = '';
     for (var i=0;Word.myWord.length;i++) {
