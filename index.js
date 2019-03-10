@@ -1,3 +1,4 @@
+// Variable declarations
 var Word = require('./word');
 var Letter = require('./letter');
 const inquirer = require('inquirer');
@@ -5,14 +6,7 @@ var index;
 var currentWord;
 const wordsList = ['fortunate', 'excitable', 'gentrification'];
 
-// function displayCurrentWord(currentWord) {
-//     var wordToDisplay = '';
-//     var length = currentWord.wordArray.length;
-//     for (var i=0;i<currentWord.wordArray.length;i++) {
-//         wordToDisplay += currentWord.wordArray[i].currentValue() + ' ';
-//     }
-//     console.log(wordToDisplay);
-// }
+//  Function definitions
 function getUserLetterGuesses() {
     inquirer
     .prompt({
@@ -53,4 +47,6 @@ function startNewGame() {
     currentWord.displayedWord();
     getUserLetterGuesses();
 }
+// Executable code starts here
+startNewGame();
 
