@@ -1,6 +1,5 @@
 function Letter(underlyingCharacter, guessed)
 {
-    console.log('letter=' + underlyingCharacter);
     this.underlyingCharacter = underlyingCharacter.toLowerCase();
     this.guessed = guessed;
     this.currentValue = function() {
@@ -12,6 +11,7 @@ function Letter(underlyingCharacter, guessed)
     }
     this.checkLetter = function(guessedCharacter) {
         if (guessedCharacter === this.underlyingCharacter) {
+            console.log('checkLetter: you guessed correct letter = ' + guessedCharacter);
             this.guessed = true;
         } 
     }
