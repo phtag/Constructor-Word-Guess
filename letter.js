@@ -10,10 +10,14 @@ function Letter(underlyingCharacter, guessed)
         }
     }
     this.checkLetter = function(guessedCharacter) {
+        var newGuess = false;
         if (guessedCharacter === this.underlyingCharacter) {
-            console.log('checkLetter: you guessed correct letter = ' + guessedCharacter);
+            if (!this.guessed) {
+                newGuess = true;
+            }
             this.guessed = true;
         } 
+        return newGuess;
     }
 }
 module.exports = Letter;
