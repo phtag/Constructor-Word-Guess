@@ -26,7 +26,7 @@ When either of the above conditions occurs, you will be prompted as to whether o
 
 Here are some screenshots of what gets displayed on the console window:
 
-![Constructor word game Screenshot](images/Constructor-word-game.jpg)
+![Constructor word game Screenshot](Constructor-word-game.jpg)
 
 
 This project is maintained by Peter Tag
