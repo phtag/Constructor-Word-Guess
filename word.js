@@ -4,7 +4,13 @@ function Word(myWord) {
     // populate the array of letters using the passed argument value
     for (var i=0;i<myWord.length;i++) {
         // Create a new letter object using the Letter constructor
-        var letter = new Letter(myWord[i], false);
+        if (myWord[i] != ' ') {
+            var letter = new Letter(myWord[i], false);
+        } else {
+            //  we don't want the player to be guessing space characters so we initialize all 
+            //  spaces to true to indicate that they were guessed already
+            var letter = new Letter(myWord[i], true);
+        }
         this.wordArray.push(letter);
     }
     this.updateDisplayedWord = function() {

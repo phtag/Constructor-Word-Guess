@@ -5,7 +5,19 @@ const inquirer = require('inquirer');
 var index;
 var currentWord;
 var guessesRemaining;
-const wordsList = ['fortunate', 'excitable', 'gentrification'];
+const wordsList = {
+        words: ['fortunate', 
+            'excitable', 
+            'gentrification',
+            'the arc of a story',
+            'Beauty and the Beast',
+            'Once upon a time'],
+        used: [false, 
+            false,
+            false,
+            false,
+            false,
+            false]};
 
 //  Function definitions
 function getUserLetterGuesses() {
@@ -68,12 +80,30 @@ function getUserLetterGuesses() {
 }
 function startNewGame() {
     guessesRemaining = 10;
-    index = Math.floor(Math.random() * wordsList.length);
-    currentWord = new Word(wordsList[index]);
-    console.log('=====================================================');
-    console.log('Next word to guess:');
-    currentWord.updateDisplayedWord();
-    getUserLetterGuesses();
+    var wordsRemaining = 0;
+    // see if there are any words remaining to be played
+    for (var i=0;i<wordsList.words.length;i++) {
+        if (!wordsList.used[i]) {
+            wordsRemaining++;
+        }
+    }
+    if (wordsRemaining > 0) {
+        // Let the user keep playing as there are still words remaining
+        do
+        {
+            index = Math.floor(Math.random() * wordsList.words.length);
+        }
+        while (wordsList.used[index]);
+        // mark the word as having been used
+        wordsList.used[index] = true;
+        currentWord = new Word(wordsList.words[index]);
+        console.log('=====================================================');
+        console.log('Next word to guess:');
+        currentWord.updateDisplayedWord();
+        getUserLetterGuesses();
+    } else {
+        console.log('The game is over. See you next time!');
+    }
 }
 // Executable code starts here
 startNewGame();
