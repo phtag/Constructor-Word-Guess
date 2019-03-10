@@ -28,5 +28,6 @@ Here are some screenshots of what gets displayed on the console window:
 
 ![Constructor word game Screenshot](Constructor-word-game.jpg)
 
+![Constructor word game Screenshot](Constructor-word-game2.jpg)
 
 This project is maintained by Peter Tag
