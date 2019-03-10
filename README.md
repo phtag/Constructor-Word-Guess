@@ -5,7 +5,7 @@ Week 11 homework assignment
 ### Overview
 This project uses Node.js to create a simple word guess game where players are presented with a word or phrase initially displayed in the console window as underscores. Players are prompted to guess letters one at a time and then are informed as to whether the letter exists in the word/phrase or not. After each correct guess, the guessed letters are displayed in their appropriate positions in the word/phrase. Players have up to 10 incorrect guesses to try and completely guess all the letters in the word/phrase. After they have either correctly guessed the word/phrase or exhausted their incorrect guesses count, they are given the opportunity to try the next word.
 
-[Constructor word guess game demo video](Constructor-word-guess-demo.webm)
+[Constructor word guess game demo video](https://github.com/phtag/Constructor-Word-Guess/tree/master/videos/Constructor-word-guess-demo.webm)
 
 NOTE: This project is referenced on my portfolio page at [my portfolio](https://phtag.github.io/Updated-portfolio/)
 
